@@ -8,18 +8,17 @@ export default class MapOfGame extends Component {
       <View>
         {this.props.gridsRefCreate.map((refCreate,index) => {
           if (index % 2 != 0) {
-            return <View ref={refCreate} key={'map'+index}>
+            return <View ref={this.props.grid1} key={'map'+index} >
               {Array(Math.floor(Math.random() * 15) + 1)
                 .fill()
                 .map((_,ind) => (
                   <View key={'row'+ind}>
-                    {console.log(ind)}
                   <Rows/>
                   </View>
                 ))}
-            </View>;
+            </View>
           } else {
-            return <View style={styles.column} ref={refCreate} key={'map'+index}>
+            return <View style={styles.column} ref={this.props.grid2} key={'map'+index}>
               {Array(Math.floor(Math.random() * 15) + 1)
                 .fill()
                 .map((_,ind) => (

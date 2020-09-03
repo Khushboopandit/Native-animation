@@ -7,17 +7,16 @@ import {
   TouchableWithoutFeedback,
   Text
 } from "react-native";
-import  {sideRowsData,centerRowData} from './map_data'
 
 export default class Main extends Component {
  
   render() {
-    console.log(centerRowData,sideRowsData)
+      let value = 'up'
     return (
       <View>
-        {sideRowsData.map((sideRow,index)=>{
-          
-        })}
+        {value == 'up'?<Image style={styles.display} source={require("../assets/rowY.png")} />:null}
+        {value == ''?<Image style={styles.display} source={require("../assets/rowY.png")} />:null}
+
       </View>
     );
   }

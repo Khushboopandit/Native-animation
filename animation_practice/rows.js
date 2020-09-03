@@ -5,9 +5,9 @@ export default class Rows extends Component {
   render() {
     return this.props.pathType != undefined &&
       this.props.pathType == "column" ? (
-      <Image style={styles.display} source={require("./assets/rowX.png")} />
+      <Image style={styles.display} source={require("../assets/rowX.png")} />
     ) : (
-      <Image style={styles.display} source={require("./assets/rowY.png")} />
+      <Image style={styles.display} source={require("../assets/rowY.png")} />
     );
   }
 }
